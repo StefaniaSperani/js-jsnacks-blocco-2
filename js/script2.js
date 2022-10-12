@@ -14,24 +14,31 @@ const lastName = ['html', 'css', 'javascript', 'bootstrap'];
 // creo un array dove metto i nomi finti
 const fakeName = [];
 
-// creo il generatore random del nome
-let nameRandom = Math.floor(Math.random() * names.length);
-names[nameRandom];
-// console.log(names[nameRandom])
-
-// creo il generatore random del cognome
-let lastNameRandom = Math.floor(Math.random() * lastName.length);
-lastName[lastNameRandom];
-// console.log(lastName[lastNameRandom])
-
-
+// creo una variabile che generi il nome fake della persona
+let fakePerson = '';
 
 // ora creo un ciclo che randomizzi la lista degli invitati
-// for(let i = 0; i < fakeName.length; i++){
-//     // console.log(fakeName[i])
+for(let i = 0; i < 4; i++){
+    // creo il generatore random del nome
+    let nameRandom = Math.floor(Math.random() * names.length);
+    names[nameRandom];
+    // console.log(names[nameRandom])
+
+    // creo il generatore random del cognome
+    let lastNameRandom = Math.floor(Math.random() * lastName.length);
+    lastName[lastNameRandom];
+    // console.log(lastName[lastNameRandom])
+
+    fakePerson = ' ' + names[nameRandom] + ' ' + lastName[lastNameRandom];
+    console.log(fakePerson)
+
+    // inserisco il nome della persona FALSO dentro l'array vuoto
+    fakeName.push(fakePerson);   
+}
+// console.log(fakeName)
 
 
-// }
-
-
-// btn.addEventListener('click', NOMEFUNZIONE)
+btn.addEventListener('click', function(){
+    jokeList.innerHTML = `Gli invitati sono: </br> 
+     ${fakeName} `
+})
