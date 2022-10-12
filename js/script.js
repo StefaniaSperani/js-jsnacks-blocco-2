@@ -20,6 +20,7 @@ function check(){
         console.log(numeroUtente)
 
         result.innerHTML = `${numeroUtente} è pari!`
+    // altrimenti, se il numero è dispari stampiamo il suo valore MA +1
     }else{
 
     }
