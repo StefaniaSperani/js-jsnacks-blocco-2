@@ -30,3 +30,8 @@ for (let i = 0; i < numberArray.length; i++){
     }
 }
 console.log(somma)
+
+btn.addEventListener('click', function(){
+    numbers.innerHTML = `La somma è </br> 
+     ${somma}`
+})
