@@ -29,3 +29,36 @@ function check(){
     }
 }
 btn.addEventListener('click', check);
+
+
+
+//BONUS 4
+
+// Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all’array 
+//che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+
+//creo due array
+const frutta = ['mela', 'banana', 'pesca', 'arancia', 'kiwi'];
+const topping = ['ciccolato', 'fragola', 'lampone'];
+
+
+
+// se frutta è maggiore di topping:
+if(frutta.length > topping.length){
+    const elementiDaAgg = frutta.length - topping.length;
+    console.log(elementiDaAgg);
+    for(let i = 0; i < elementiDaAgg; i++){
+        topping.push(i);
+    }
+    console.log(topping);
+}else if(topping.length > frutta.length){
+    const elementiDaAgg = topping.length - frutta.length;
+    for(let i = 0; i < elementiDaAgg; i++){
+        frutta.push(i);
+    }
+    console.log(frutta);
+}else{
+    console.log('sono uguali')
+}
+
+
